@@ -1093,6 +1093,8 @@ mono_image_open_from_data_with_name (char *data, guint32 data_len, gboolean need
 			*status = MONO_IMAGE_IMAGE_INVALID;
 		return NULL;
 	}
+
+	g_warning("=====open image from data:%s", name);
 	datac = data;
 	if (need_copy) {
 		datac = g_try_malloc (data_len);
